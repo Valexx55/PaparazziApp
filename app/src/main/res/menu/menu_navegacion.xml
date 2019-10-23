@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Camera options">
+        <menu>
+            <item
+                android:orderInCategory="1"
+                android:title="Tomar foto disco"
+                android:icon="@drawable/ic_camera_enhance_black_24dp"/>
+            <item
+                android:orderInCategory="2"
+                android:title="Tomar foto ram"
+                android:icon="@drawable/ic_add_a_photo_black_24dp"/>
+            <item
+                android:orderInCategory="3"
+                android:title="Seleccionar foto"
+                android:icon="@drawable/ic_photo_size_select_actual_black_24dp"/>
+
+
+
+        </menu>
+    </item>
+
+
+</menu>
