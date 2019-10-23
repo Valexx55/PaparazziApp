@@ -51,13 +51,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         String menu = item.getTitle().toString();
-        int npi = item.getOrder();//obtengo el número del punto de interés
+        int order = item.getOrder();//obtengo el número del punto de interés
+        Intent actividad = null;
 
-        Log.d(getClass().getCanonicalName(), "Ha tocado la opción " + menu + " " +npi);
-        Intent irTomarFoto = new Intent(this,TomarFotoDisco.class);
-        startActivity(irTomarFoto);
-        drawerLayout.closeDrawers();
-        menu_visible = false;
+        switch (order)
+        {
+            case 1:
+                actividad = new Intent(this, TomarFotoDisco.class);
+                break;
+            case 2:
+                actividad = new Intent(this, TomarFotoRam.class);
+                break;
+            case 3:
+                actividad = new Intent(this, SeleccionFotoActivity.class);
+                break;
+
+        }
+
+        startActivity(actividad);
 
         return false;
 
