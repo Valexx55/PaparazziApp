@@ -2,6 +2,7 @@ package com.example.paparazziapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
@@ -32,6 +33,13 @@ public class TomarFotoDisco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tomar_foto_disco);
+
+        //quitar la barra
+        getSupportActionBar().hide();
+        //volver a mostrar la barra
+        /*ActionBar barra = getSupportActionBar();
+        barra.show();
+        getSupportActionBar().show();*/
 
         ActivityCompat.requestPermissions(this, PERMISOS, 100);
     }
